@@ -5,7 +5,7 @@ const port = 8080;
 app.get('/', (req, res) => {
     res.status(200).json({
         success: true,
-        message: "hello world!",
+        message: "trigger",
     });
 });
 
