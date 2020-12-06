@@ -1,4 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/ilkerispir/cloud-build', '.']
-images: ['gcr.io/ilkerispir/cloud-build']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/ilkerispir/cloud-build']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'ilkerispir', '--image', 'gcr.io/ilkerispir/cloud-build', '--region', 'europe-west4', '--platform', 'managed']
+images:
+- gcr.io/ilkerispir/cloud-build
