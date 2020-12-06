@@ -2,4 +2,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/ilkerispir/cloud-build:$SHORT_SHA', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', '-t', 'gcr.io/ilkerispir/cloud-build:$SHORT_SHA', '.']
+  args: ['push', 'gcr.io/ilkerispir/cloud-build:$SHORT_SHA', '.']
