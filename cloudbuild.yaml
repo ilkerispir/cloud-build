@@ -5,6 +5,6 @@ steps:
   args: ['push', 'gcr.io/ilkerispir/cloud-build']
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
-  args: ['run', 'deploy', 'ilkerispir', '--image', 'gcr.io/ilkerispir/cloud-build', '--region', 'europe-west4', '--platform', 'managed']
+  args: ['run', 'deploy', 'cloud-build', '--image', 'gcr.io/ilkerispir/cloud-build', '--region', 'europe-west4', '--platform', 'managed']
 images:
 - gcr.io/ilkerispir/cloud-build
