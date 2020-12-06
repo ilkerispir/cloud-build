@@ -1,0 +1,22 @@
+{
+  "name": "cloud-build",
+  "version": "1.0.0",
+  "description": "GCP Cloud Build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilkerispir/cloud-build.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilkerispir/cloud-build/issues"
+  },
+  "homepage": "https://github.com/ilkerispir/cloud-build#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
