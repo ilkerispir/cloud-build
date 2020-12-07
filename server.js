@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const publicIp = require('public-ip');
 const port = 8080;
 
 const app = express();
@@ -12,7 +13,8 @@ app.get('/', async (req, res) => {
   var reponse = await axios(config);
 
   res.status(200).json({
-    success: true
+    success: true,
+    ipAddress: await publicIp.v4()
   });
 });
 
