@@ -14,7 +14,8 @@ app.get('/', async (req, res) => {
 
   res.status(200).json({
     success: true,
-    ipAddress: await publicIp.v4()
+    ipAddress: await publicIp.v4(),
+    message: "test"
   });
 });
 
